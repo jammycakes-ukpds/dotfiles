@@ -1,0 +1,5 @@
+#! /usr/bin/env bash
+
+REMOTE=${1:-origin}
+
+git remote -v | grep -F "$REMOTE" | head -1 | cut -f2 | cut -d' ' -f1
