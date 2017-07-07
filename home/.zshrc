@@ -79,3 +79,14 @@ git-cd() {
     fi
 }
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Define pbcopy and pbpaste
+
+if ! which pbcopy > /dev/null; then
+    if which xclip > /dev/null; then
+        alias pbcopy='xclip -selection clipboard'
+        alias pbpaste='xclip -selection clipboard -o'
+    fi
+fi
