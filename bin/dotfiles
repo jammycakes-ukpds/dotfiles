@@ -1,0 +1,11 @@
+#! /usr/bin/env python
+
+from os.path import dirname, islink
+from os import readlink
+
+binfiles = dirname(__file__)
+if (islink(binfiles)):
+    binfiles = readlink(binfiles)
+dotfiles = dirname(binfiles)
+
+print(dotfiles)
