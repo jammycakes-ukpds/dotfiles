@@ -40,8 +40,9 @@ cd-git-root() {
     chdir "$(git root)"
 }
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+if [ "$TARGET_OS" = "osx" ]; then
+    export LSCOLORS=gxfxcxdxbxegedabagacad
+fi
 
 # Define pbcopy and pbpaste
 
@@ -51,3 +52,6 @@ if ! which pbcopy > /dev/null; then
         alias pbpaste='xclip -selection clipboard -o'
     fi
 fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
