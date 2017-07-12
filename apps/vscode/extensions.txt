@@ -2,6 +2,7 @@ donjayamanne.python
 DotJoshJohnson.xml
 lukehoban.Go
 mauve.terraform
+ms-vscode.csharp
 PeterJausovec.vscode-docker
 rebornix.Ruby
 vscodevim.vim
