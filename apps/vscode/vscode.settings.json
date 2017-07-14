@@ -2,15 +2,14 @@
 {
     "editor.fontFamily": "Menlo, 'DejaVu Sans Mono', Consolas, Monaco, 'Courier New', monospace, 'Droid Sans Fallback'",
     "editor.fontSize": 11,
+    "editor.minimap.enabled": false,
     "editor.renderWhitespace": "all",
     "editor.renderIndentGuides": true,
     "editor.rulers": [
         80, 100, 120
     ],
-
     "editor.tabCompletion": true,
 
-    "files.trimTrailingWhitespace": true,
 
     "files.exclude": {
         "**/.git": true,
@@ -21,6 +20,7 @@
         "__pycache__": true,
         "**/*.pyc": true
     },
+    "files.trimTrailingWhitespace": true,
 
     "search.exclude": {
         "**/.terraform": true
@@ -29,5 +29,6 @@
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "terminal.integrated.shell.linux": "zsh",
 
-    "terraform.formatOnSave": true
+    "terraform.formatOnSave": true,
+    "workbench.activityBar.visible": true
 }
