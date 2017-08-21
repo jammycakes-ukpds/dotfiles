@@ -59,9 +59,11 @@ alias la='ls -a'
 # liberally.
 HISTFILE=~/.histfile
 HISTSIZE=10000
-SAVEHIST=10000
+SAVEHIST=5000
 setopt sharehistory
 setopt extendedhistory
+setopt hist_ignore_all_dups
+setopt hist_expire_dups_first
 
 # Enables all sorts of extended globbing, such as ls **/*.txt (find all text
 # files), ls -d *(D) (show all files including those starting with "."). To find
