@@ -1,5 +1,7 @@
+donjayamanne.githistory
 donjayamanne.python
 DotJoshJohnson.xml
+eamodio.gitlens
 lukehoban.Go
 mauve.terraform
 ms-vscode.csharp
