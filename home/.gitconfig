@@ -1,6 +1,6 @@
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = code
+	editor = code --wait
 [difftool "sourcetree"]
 	cmd = p4merge \"$LOCAL\" \"$REMOTE\"
 	path =
@@ -19,6 +19,7 @@
 	ln = log --pretty=natural --date=format:\"%d/%m/%Y %H:%M:%S\"
 	lonn = log --pretty=natural-gap --date=format:\"%d/%m/%Y %H:%M:%S\"
 	code = !code `git root`
+	addremove = !git add `git root`
 [gpg]
 	program = gpg2
 [pretty]
