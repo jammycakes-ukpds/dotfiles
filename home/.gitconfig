@@ -18,6 +18,7 @@
 	graph = log --graph --pretty=natural-gap --date=format:\"%d/%m/%Y %H:%M:%S\"
 	ln = log --pretty=natural --date=format:\"%d/%m/%Y %H:%M:%S\"
 	lonn = log --pretty=natural-gap --date=format:\"%d/%m/%Y %H:%M:%S\"
+	code = !code `git root`
 [gpg]
 	program = gpg2
 [pretty]
