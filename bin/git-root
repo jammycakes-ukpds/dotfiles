@@ -1,0 +1,10 @@
+#! /usr/bin/env bash
+
+GITDIR=$(git rev-parse --show-toplevel)
+
+if [ $# -gt 0 ]; then
+    cd $GITDIR
+    eval "$@"
+else
+    echo $GITDIR
+fi

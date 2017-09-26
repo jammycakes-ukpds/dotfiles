@@ -14,7 +14,6 @@
 [commit]
 	gpgsign = true
 [alias]
-	root = rev-parse --show-toplevel
 	graph = log --graph --pretty=natural-gap --date=format:\"%d/%m/%Y %H:%M:%S\"
 	ln = log --pretty=natural --date=format:\"%d/%m/%Y %H:%M:%S\"
 	lonn = log --pretty=natural-gap --date=format:\"%d/%m/%Y %H:%M:%S\"
