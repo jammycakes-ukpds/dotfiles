@@ -10,6 +10,7 @@
     ],
     "editor.tabCompletion": true,
 
+    "git.enableCommitSigning": true,
 
     "files.exclude": {
         "**/.git": true,
