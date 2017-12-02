@@ -2,4 +2,4 @@
 
 apt-get update
 apt-get -y upgrade
-apt-get -y install zsh curl vim python python3 python3-pip xclip cmake
+apt-get -y install zsh curl vim python python3 python3-dev python3-pip xclip cmake

@@ -1,20 +1,7 @@
 #! /usr/bin/env bash
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-# ====== Detect the OS ====== #
-
-case "$OSTYPE" in
-    darwin*)
-        export TARGET_OS=osx
-        ;;
-    linux*)
-        export TARGET_OS=linux
-        ;;
-    *)
-        export TARGET_OS=""
-        ;;
-esac
+source $DIR/lib/detect.sh
 
 # ====== Create backup folders ====== #
 
@@ -27,8 +14,8 @@ fi
 
 # ====== OS-specific preinstall script ====== #
 
-if [ -f $DIR/$TARGET_OS/preinstall.sh ]; then
-    . $DIR/$TARGET_OS/preinstall.sh
+if [ -f $DIR/$TARGET_OS/pre-configure.sh ]; then
+    . $DIR/$TARGET_OS/pre-configure.sh
 fi
 
 # ====== Symlink all dotfiles and dotfolders into root directory ====== #
@@ -49,7 +36,7 @@ done
 # ====== Additional folders to append to path ====== #
 
 mkdir -p ~/.bin
-if ! [ -e "$DIR/bin" ]; then
+if ! [ -e ~/.bin/dotfiles ]; then
     ln -s "$DIR/bin" ~/.bin/dotfiles
 fi
 
@@ -69,6 +56,6 @@ done
 
 # ====== OS-specific post-install script ====== #
 
-if [ -f "$DIR/$TARGET_OS/postinstall.sh" ]; then
-    . "$DIR/$TARGET_OS/postinstall.sh"
+if [ -f "$DIR/$TARGET_OS/configure.sh" ]; then
+    . "$DIR/$TARGET_OS/configure.sh"
 fi

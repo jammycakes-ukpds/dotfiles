@@ -6,7 +6,7 @@ case "$OSTYPE" in
     darwin*)
         CONFIG_LOCATION=~/"Library/Application Support/Code/User"
         ;;
-    linux*)
+    linux* | ubuntu*)
         CONFIG_LOCATION=~/.config/Code/User
         ;;
     *)
