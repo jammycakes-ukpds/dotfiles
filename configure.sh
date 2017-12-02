@@ -3,6 +3,9 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/lib/detect.sh
 
+cd $DIR
+git submodule update --init --recursive
+
 # ====== Create backup folders ====== #
 
 if ! [ -f ~/.dotfiles-backup/home ]; then
