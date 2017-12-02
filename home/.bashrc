@@ -30,7 +30,7 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-PS1="\[$(tput setaf 10)\]\[$(tput bold)\]\u\[$(tput sgr0)\]\[$(tput setaf 14)\] \w\[$(tput setaf 9)\]\$(parse_git_branch)\n\[$(tput setaf 8)\]\!\[$(tput setaf 15)\] $ "
+PS1="\[\e[92m\]\[\e[1m\]\u\[\e(B\e[m\]\[\e[96m\] \w\[\e[91m\]\$(parse_git_branch)\n\[\e[90m\]\!\[\e[97m\] $ "
 
 alias ls="ls -G"
 
