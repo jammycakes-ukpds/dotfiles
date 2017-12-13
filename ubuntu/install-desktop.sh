@@ -12,7 +12,15 @@ echo "deb http://repo.sinew.in/ stable main" > \
   /etc/apt/sources.list.d/enpass.list
 wget -O - https://dl.sinew.in/keys/enpass-linux.key | apt-key add -
 
+# KeepassXC
+
+add-apt-repository -y ppa:phoerious/keepassxc
+
 # All of the above
 
 apt-get update
 apt-get -y install code enpass
+
+apt-get -y install nemo
+apt-get -y install cinnamon-desktop-environment
+apt-get -y install keepassxc
