@@ -30,6 +30,14 @@
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "terminal.integrated.shell.linux": "zsh",
 
-    "terraform.formatOnSave": true,
-    "workbench.activityBar.visible": true
+    "terraform.format.enable": true,
+    "workbench.activityBar.visible": true,
+    "window.zoomLevel": 0,
+
+    "gitlens.codeLens.enabled": false,
+
+    "[terraform]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    }
 }
