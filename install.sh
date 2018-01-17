@@ -49,7 +49,7 @@ done
 # ====== Additional folders to append to path ====== #
 
 mkdir -p ~/.bin
-if ! [ -e "$DIR/bin" ]; then
+if ! [ -e ~/.bin/dotfiles ]; then
     ln -s "$DIR/bin" ~/.bin/dotfiles
 fi
 
