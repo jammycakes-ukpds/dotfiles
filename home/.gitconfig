@@ -9,8 +9,8 @@
 	trustExitCode = true
 [user]
 	name = James McKay
-	email = code@jamesmckay.net
-	signingkey = 1B9DC839
+	email = mckayj@parliament.uk
+	signingkey = 33ECAF27
 [commit]
 	gpgsign = true
 [alias]
