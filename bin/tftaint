@@ -1,0 +1,20 @@
+#! /usr/bin/env python
+
+import subprocess
+import sys
+
+for arg in sys.argv[1:]:
+    parts = arg.split('.')
+    module_names = []
+    while parts[0] == 'module' and len(parts) >= 2:
+        module_names += [parts[1]]
+        parts = parts[2:]
+    args = [
+        'terraform',
+        'taint',
+        '-module',
+        '.'.join(module_names),
+        '.'.join(parts)
+    ]
+    print(' '.join(args))
+    subprocess.call(args)
