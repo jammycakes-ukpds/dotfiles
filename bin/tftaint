@@ -1,5 +1,18 @@
 #! /usr/bin/env python
 
+"""
+A sane interface to terraform taint.
+
+This command will allow you to taint a resource by specifying its full name in
+the format that you get from terraform state list.
+
+You can then do this for example:
+
+    terraform state list | grep aws_instance | xargs tftaint
+
+this will mark all your instances as tainted.
+"""
+
 import subprocess
 import sys
 
